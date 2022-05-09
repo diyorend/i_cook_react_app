@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  margin: 0 5%;
+}
+
+h4 {
+  font-size: 1rem;
+  color: rgb(50, 50, 50);
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: rgb(50, 50, 50);
+  line-height: 2rem;
+  margin: 1rem 0;
+}
+a {
+  color: rgb(50, 50, 50);
+  text-decoration: none;
+}
+input {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
