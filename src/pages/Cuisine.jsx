@@ -15,7 +15,6 @@ const Cuisine = () => {
 
     if (check) {
       setCuisine(JSON.parse(check));
-      console.log(check);
     } else {
       const api = await fetch(
         `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_I_COOK_API}&cuisine=${name}&number=25`
@@ -27,10 +26,15 @@ const Cuisine = () => {
   };
 
   return (
-    <Grid>
+    <Grid
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       {cuisine.map((result) => {
         return (
-          <Card key={result.id}>
+          <Card key={result.id} to={`/recipe/${result.id}`}>
             <p>{result.title}</p>
             <img src={result.image} alt={result.title} />
             <Gradient />
@@ -41,13 +45,13 @@ const Cuisine = () => {
   );
 };
 
-const Grid = styled.div`
+const Grid = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 2rem;
 `;
 
-const Card = styled.div`
+const Card = styled(Link)`
   min-height: 15rem;
   position: relative;
   border-radius: 1.5rem;

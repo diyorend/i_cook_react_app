@@ -5,6 +5,14 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+html {
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 950px) {
+  html {
+    font-size: 80%;
+  }
+}
 body {
   margin: 0 5%;
 }
@@ -23,8 +31,13 @@ h3 {
 a {
   color: rgb(50, 50, 50);
   text-decoration: none;
+  display: block;
 }
 input {
   font-size: 1rem;
   font-family: "Montserrat", sans-serif;
+}
+
+button {
+  cursor: pointer;
 }

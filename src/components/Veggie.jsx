@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
@@ -22,7 +23,6 @@ const Veggie = () => {
       const data = await api.json();
       localStorage.setItem("veggie", JSON.stringify(data.recipes));
       setVeggie(data.recipes);
-      console.log(data.recipes);
     }
   };
 
@@ -41,7 +41,7 @@ const Veggie = () => {
         {veggie.map((recipe) => {
           return (
             <SplideSlide key={recipe.id}>
-              <Card>
+              <Card to={`/recipe/${recipe.id}`}>
                 <p>{recipe.title}</p>
                 <span>
                   {recipe.spoonacularScore}
@@ -55,8 +55,8 @@ const Veggie = () => {
                     <path
                       d="M16.2 2.38783L18.3 6.55001C18.6 7.2437 19.3 7.73918 20.1 7.83828L24.7 8.53199C26.6 8.82929 27.4 11.1086 26 12.496L22.7 15.6671C22.1 16.1626 21.9 16.9554 22 17.7482L22.8 22.3068C23.1 24.1897 21.1 25.6761 19.4 24.7843L15.3 22.6041C14.6 22.2077 13.8 22.2077 13.1 22.6041L8.99999 24.7843C7.29999 25.6761 5.3 24.1897 5.6 22.3068L6.39998 17.7482C6.49998 16.9554 6.3 16.2617 5.7 15.6671L2.39998 12.496C0.999985 11.1086 1.8 8.82929 3.7 8.53199L8.29998 7.83828C9.09998 7.73918 9.7 7.2437 10.1 6.55001L12.2 2.38783C12.9 0.604041 15.3 0.604041 16.2 2.38783Z"
                       stroke="#fff"
-                      stroke-width="2"
-                      stroke-miterlimit="10"
+                      strokeWidth="2"
+                      strokeMiterlimit="10"
                     />
                   </svg>
                 </span>
@@ -74,7 +74,7 @@ const Veggie = () => {
 const Wrapper = styled.div`
   margin: 4rem 0;
 `;
-const Card = styled.div`
+const Card = styled(Link)`
   min-height: 17rem;
   position: relative;
   border-radius: 1.5rem;

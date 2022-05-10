@@ -41,7 +41,7 @@ const FormStyled = styled.form`
   position: relative;
   width: 50%;
   margin: auto;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 950px) {
     width: 90%;
   }
   svg {
@@ -49,7 +49,7 @@ const FormStyled = styled.form`
     position: absolute;
     top: 50%;
     left: 0px;
-    transform: translate(70%, -50%);
+    transform: translate(55%, -50%);
     cursor: pointer;
     color: white;
     font-size: 1.5rem;

@@ -31,7 +31,7 @@ const List = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem auto;
+  margin: 1rem auto;
   width: 22rem;
   a {
     display: flex;
