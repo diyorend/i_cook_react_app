@@ -94,6 +94,7 @@ const DetailWrapper = styled.div`
 
   h2 {
     margin: 1rem 0;
+    padding: 1rem 0;
   }
   li {
     font-size: 1.2rem;
