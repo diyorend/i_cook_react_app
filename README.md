@@ -2,7 +2,7 @@
 you can find too much meals that you can cook by yourself absolutely at home.
 i used spoonacular API.
 i put it on Netlify. Please try it and have fun!
-here is the link: https://golden-lokum-2ca98c.netlify.app/
+here is the link: https://icook-diyorend.netlify.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
